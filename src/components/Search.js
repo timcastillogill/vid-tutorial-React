@@ -34,4 +34,18 @@ export default class Search extends Component {
       }
     })
   }
+
+  handleTagInputChange = () => {
+    this.setState({ 
+      tagQuery: this.tag.value
+    }, () => {
+      if (this.state.tagQuery && this.state.tagQuery.length > 1) {
+        if (this.state.tagQuery.length % 2 === 0) {
+          return this.getInfo();
+        }
+      } else if (this.state.tagQuery === "") {
+        this.setState({ results: [] })
+      }
+    })
+  }
 }
