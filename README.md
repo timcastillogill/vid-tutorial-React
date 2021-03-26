@@ -27,7 +27,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm run cypress:open`
+### `npx cypress open`
 
 Launches the Cypress UI where tests can be ran. A screenshot can be seen below:
 ![cypress test screenshot](cypress_testing_screenshot.png)
