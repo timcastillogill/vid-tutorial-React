@@ -59,7 +59,27 @@ export default class Search extends Component {
     const searchForTutorials = this.state.results.filter((data) => {
       if (this.state.searchQuery == null) {
         return data;
-      } else if (data.videoTitle.toLwerCase().includes(this.state.searchQuery.toLowerCase()) || data.teacherName.toLowerCase().includes(this.state.searchQuery.toLowerCase())) {
+      } else if (data.videoTitle.toLowerCase().includes(this.state.searchQuery.toLowerCase()) || data.teacherName.toLowerCase().includes(this.state.searchQuery.toLowerCase())) {
+        return data;
+      }
+    }).map(data => {
+      return (
+        <Container maxWidth="sm">
+          <Card className="root">
+            <CardContent>
+              <Typography className="title">{data.videoTitle}</Typography>
+              <Typography className="url">{data.videoUrl}</Typography>
+              <Typography className="name">{data.teacherName}</Typography>
+            </CardContent>
+          </Card>
+        </Container>
+      )
+    })
+
+    const searchForTags = this.state.results.filter((data) => {
+      if (this.state.tagQuery == null) {
+        return data;
+      } else if (data.tags.map(word => word.toLowerCase()).includes(this.state.tagQuery.toLowerCase())) {
         return data;
       }
     }).map(data => {
@@ -94,6 +114,23 @@ export default class Search extends Component {
               margin: 'auto',
             }}
             />
+            <TextField
+              variant="filled"
+              className="inputTags"
+              color="primary"
+              fullWidth="true"
+              type="text"
+              placeholder="Search using Tags..."
+              inputRef={input => this.tag = input}
+              onChange={this.handleTagInputChange}
+              style={{
+                backgroundColor: '#F4BE37',
+                margin: '10px',
+                width: '30%',
+                display: 'flex',
+                margin: '10px auto',
+              }}
+              />
           <Container maxWidth="sm">
             {this.state.loadingData &&
             <Button
@@ -116,7 +153,7 @@ export default class Search extends Component {
             </Button>}
           </Container>
         </form>
-        {/* {searchForTags} */}
+        {searchForTags}
         {searchForTutorials}
       </div>
     )
