@@ -1,8 +1,21 @@
-# Getting Started with Create React App
+# Vid-Tutorial
+Welcome to this English learning portal.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+On the site there are two search bars for you to find the video you are looking for.
+1. *Search For Tutorial*: This will search through both the video title and teacher name.
+2. *Search Using Tags*: This will search **only** using the tags the creator thinks applicable.
 
-## Available Scripts
+### Results
+* Your results will be rendered in a series of cards. Each card will have the video title, video URL and teacher name. 
+* **Note**: Results will be ordered by the best average user rating. The top card on the screen, has been rated the **best**.
+
+# Boilerplates & Frameworks
+
+* create-react-app to start the project
+* Material-UI used for some styling
+* Cypress used for testing
+
+# Instructions for Vid-Tutorial: Lingumi Tech Test
 
 In the project directory, you can run:
 
@@ -14,58 +27,15 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+### `npm run cypress:open`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the Cypress UI where tests can be ran. A screenshot can be seen below:
+![cypress test screenshot](cypress_testing_screenshot.png)
 
-### `npm run build`
+# Limitations & Assumptions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* The search functions will render **no results** if there is no match to the JSON data.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* The two search functions cannot be used in conjunction, for example you cannot search for a teacher and then refine the search using tags. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# vid-tutorial-React
+* The data card will render the URL for the video. It is assumed that if the link were active, this would render the video linked.
