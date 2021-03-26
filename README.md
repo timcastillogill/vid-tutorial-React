@@ -5,6 +5,8 @@ On the site there are two search bars for you to find the video you are looking 
 1. *Search For Tutorial*: This will search through both the video title and teacher name.
 2. *Search Using Tags*: This will search **only** using the tags the creator thinks applicable.
 
+![Screenshot of the app](lingumiSearchScreenshot.png)
+
 ### Results
 * Your results will be rendered in a series of cards. Each card will have the video title, video URL and teacher name. 
 * **Note**: Results will be ordered by the best average user rating. The top card on the screen, has been rated the **best**.
