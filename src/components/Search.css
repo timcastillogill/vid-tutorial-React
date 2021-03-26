@@ -1,0 +1,18 @@
+.root {
+  display: inline-block;
+  margin-top: 0.5em;
+  transform: scale(1);
+}
+
+.url {
+  text-decoration: underline;
+  text-decoration: italic;
+}
+
+.button {
+  justify-content: flex-end;
+}
+
+.inputSearch {
+  padding: 5px 5px;
+}

@@ -5,6 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 10px,
+    rgba(0, 0, 0, 0.3) 30px,
+    rgba(0, 0, 0, 0.3) 20px
+  ),
+  url(https://i2.wp.com/literacyapps.literacytrust.org.uk/wp-content/uploads/2020/03/Lingumi-2.png?resize=640%2C356);
+  background-size: cover;
 }
 
 code {

@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
+import './Search.css'
 import axios from 'axios';
 
 export default class Search extends Component {
@@ -31,7 +32,7 @@ export default class Search extends Component {
     this.setState({ 
       searchQuery: this.search.value
     }, () => {
-      if (this.state.serachQuery && this.state.searchQuery.length > 1) {
+      if (this.state.searchQuery && this.state.searchQuery.length > 1) {
         if (this.state.searchQuery.length % 2 === 0) {
           this.getInfo()
         }
@@ -104,7 +105,7 @@ export default class Search extends Component {
             color="secondary"
             type="text"
             placeholder="Search for Tutorials..."
-            inputRef={input => this.serach = input}
+            inputRef={input => this.search = input}
             onChange={this.handleSearchInputChange}
             style={{
               backgroundColor: '#5FBCDD',
