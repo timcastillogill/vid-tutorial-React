@@ -20,4 +20,18 @@ export default class Search extends Component {
     })
     .catch(() => this.setState({ error: true }));
   }
+
+  handleSearchInputChange = () => {
+    this.setState({ 
+      searchQuery: this.search.value
+    }, () => {
+      if (this.state.serachQuery && this.state.searchQuery.length > 1) {
+        if (this.state.searchQuery.length % 2 === 0) {
+          this.getInfo()
+        }
+      } else if (this.state.serachQuery === "") {
+        this.setState({ results: [] });
+      }
+    })
+  }
 }
